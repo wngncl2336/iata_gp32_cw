@@ -1,0 +1,143 @@
+{
+  "Rule-based": {
+    "participants": {
+      "precision": 0.18254799301919722,
+      "recall": 0.18555846422338568,
+      "f1": 0.17148535001938145,
+      "false_positives": 487,
+      "false_negatives": 527,
+      "prediction_volume": 567,
+      "gold_volume": 607,
+      "std_f1": 0.23870019999612443,
+      "n_docs": 191
+    },
+    "interventions": {
+      "precision": 0.06311201887118117,
+      "recall": 0.039535028671154326,
+      "f1": 0.044848624231329855,
+      "false_positives": 373,
+      "false_negatives": 825,
+      "prediction_volume": 395,
+      "gold_volume": 847,
+      "std_f1": 0.16444371106201291,
+      "n_docs": 191
+    },
+    "outcomes": {
+      "precision": 0.18779398321283133,
+      "recall": 0.0800249813492807,
+      "f1": 0.10167518727566059,
+      "false_positives": 418,
+      "false_negatives": 1347,
+      "prediction_volume": 493,
+      "gold_volume": 1422,
+      "std_f1": 0.1611063002693853,
+      "n_docs": 191
+    },
+    "_GLOBAL": {
+      "micro_precision": 0.1404090657822001,
+      "micro_recall": 0.09906396255850235,
+      "micro_f1": 0.11616739080722617,
+      "total_tp": 254,
+      "total_fp": 1555,
+      "total_fn": 2310
+    },
+    "_CONSISTENCY": {
+      "mean_f1": 0.10600305384212394,
+      "std_f1_per_doc": 0.11733504823907823
+    }
+  },
+  "LLM-EndToEnd": {
+    "participants": {
+      "precision": 0.4571116928446772,
+      "recall": 0.48422576550848806,
+      "f1": 0.4407898371704427,
+      "false_positives": 472,
+      "false_negatives": 439,
+      "prediction_volume": 640,
+      "gold_volume": 607,
+      "std_f1": 0.24994363321369925,
+      "n_docs": 191
+    },
+    "interventions": {
+      "precision": 0.3105709299426576,
+      "recall": 0.24266605994354684,
+      "f1": 0.23692901903557895,
+      "false_positives": 496,
+      "false_negatives": 737,
+      "prediction_volume": 606,
+      "gold_volume": 847,
+      "std_f1": 0.24832389027850374,
+      "n_docs": 191
+    },
+    "outcomes": {
+      "precision": 0.4499305958730042,
+      "recall": 0.3997362995284154,
+      "f1": 0.3991012808037836,
+      "false_positives": 1014,
+      "false_negatives": 1243,
+      "prediction_volume": 1193,
+      "gold_volume": 1422,
+      "std_f1": 0.22241201133771385,
+      "n_docs": 191
+    },
+    "_GLOBAL": {
+      "micro_precision": 0.42590336987413724,
+      "micro_recall": 0.3500166833500167,
+      "micro_f1": 0.38424908424908427,
+      "total_tp": 1049,
+      "total_fp": 1414,
+      "total_fn": 1948
+    },
+    "_CONSISTENCY": {
+      "mean_f1": 0.35894004566993504,
+      "std_f1_per_doc": 0.1567778202698264
+    }
+  },
+  "LLM-Decomposed": {
+    "participants": {
+      "precision": 0.34657192720019947,
+      "recall": 0.49530778994129776,
+      "f1": 0.3854125804387585,
+      "false_positives": 649,
+      "false_negatives": 437,
+      "prediction_volume": 819,
+      "gold_volume": 607,
+      "std_f1": 0.2176833875383103,
+      "n_docs": 191
+    },
+    "interventions": {
+      "precision": 0.36159311892296186,
+      "recall": 0.27538441779279477,
+      "f1": 0.27768561555133775,
+      "false_positives": 432,
+      "false_negatives": 725,
+      "prediction_volume": 554,
+      "gold_volume": 847,
+      "std_f1": 0.27220655797923315,
+      "n_docs": 191
+    },
+    "outcomes": {
+      "precision": 0.4397800758595338,
+      "recall": 0.43134021686146734,
+      "f1": 0.4121708016590737,
+      "false_positives": 1195,
+      "false_negatives": 1241,
+      "prediction_volume": 1376,
+      "gold_volume": 1422,
+      "std_f1": 0.21638885474933175,
+      "n_docs": 191
+    },
+    "_GLOBAL": {
+      "micro_precision": 0.4010133912414043,
+      "micro_recall": 0.3681063122923588,
+      "micro_f1": 0.38385588082452793,
+      "total_tp": 1108,
+      "total_fp": 1655,
+      "total_fn": 1902
+    },
+    "_CONSISTENCY": {
+      "mean_f1": 0.35842299921639004,
+      "std_f1_per_doc": 0.14996011010423074
+    }
+  }
+}
