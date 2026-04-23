@@ -29,8 +29,8 @@ Abstract: "A comparison of the serologic responses to oral and injectable trival
 Output:
 {
     "participants": ["United States children two months of age", "439 children at two , four , and six months of age and from 85 children at 18 and 20 months of age"],
-    "interventions": ["trivalent poliovirus vaccines .", "oral trivalent poliovirus vaccine ( OPV )", "injectable ( inactivated ) trivalent poliovirus vaccine ( IPV )"],
-    "outcomes": ["neutralizing antibodies .", "percentage of children with detectable antibodies and the reciprocal geometric mean titers", "antibodies to all three poliovirus types .", "geometric mean titers against types 2 and 3"]
+    "interventions": ["trivalent poliovirus vaccines .", "oral trivalent poliovirus vaccine ( OPV )", "injectable ( inactivated ) trivalent poliovirus vaccine ( IPV )", "IPV"],
+    "outcomes": ["neutralizing antibodies .", "percentage of children with detectable antibodies and the reciprocal geometric mean titers", "antibodies to all three poliovirus types .", "detectable", "geometric mean titers against types 2 and 3"]
 }
 
 Abstract: "{abstract}"
@@ -55,8 +55,8 @@ Abstract: "A comparison of the serologic responses to oral and injectable trival
 Output:
 {
     "participants": ["United States children two months of age", "439 children at two , four , and six months of age and from 85 children at 18 and 20 months of age"],
-    "interventions": ["trivalent poliovirus vaccines .", "oral trivalent poliovirus vaccine ( OPV )", "injectable ( inactivated ) trivalent poliovirus vaccine ( IPV )"],
-    "outcomes": ["neutralizing antibodies .", "percentage of children with detectable antibodies and the reciprocal geometric mean titers", "antibodies to all three poliovirus types .", "geometric mean titers against types 2 and 3"]
+    "interventions": ["trivalent poliovirus vaccines .", "oral trivalent poliovirus vaccine ( OPV )", "injectable ( inactivated ) trivalent poliovirus vaccine ( IPV )", "IPV"],
+    "outcomes": ["neutralizing antibodies .", "percentage of children with detectable antibodies and the reciprocal geometric mean titers", "antibodies to all three poliovirus types .", "detectable", "geometric mean titers against types 2 and 3"]
 }
 
 Example 2:
@@ -66,7 +66,7 @@ Output:
 {
     "participants": ["Sixty adult patients , ASA Classes I & II"],
     "interventions": ["intranasal surgery -- comparison", "Mallinckrodt Hi-Lo-Evac tube and Portex blue line tube"],
-    "outcomes": ["effective protection of the lower airways", "postoperative morbidity"]
+    "outcomes": ["effective", "effective protection of the lower airways", "safety" "postoperative morbidity"]
 }
 
 Example 3: 
@@ -75,8 +75,8 @@ Abstract: "The effect of values affirmation on race-discordant patient-provider 
 Output:
 {
     "participants": ["race-discordant patient-provider", "African American patients and white health care providers", "99 African American patients with hypertension"],
-    "interventions": ["values-affirmation exercise or a control exercise", "care visits"],
-    "outcomes": ["medical condition", "and respectful ( P = .02 ) and less depressed", ". Patient questionnaires", "mood . Mean visit duration did not differ significantly between the groups ("]
+    "interventions": ["values-affirmation exercise or a control exercise", "values-affirmation exercise"],
+    "outcomes": ["information", "medical condition", "interested , friendly , responsive , interactive , and respectful", "depressed and distressed", "visit satisfaction , trust , stress , or mood . Mean visit duration"]
 }
 
 Example 4:
@@ -95,7 +95,7 @@ Abstract: "A comparative trial of fixed ratio beta-adrenoceptor blocker and diur
 Output:
 {
     "participants": ["moderate hypertension .", "10 previously untreated hypertensive patients ."],
-    "interventions": ["beta-adrenoceptor blocker and diuretic combination products", "pindolol combined with 5 mg clopamide", "metoprolol combined with 12.5 mg hydrochlorothiazide", "combination products"],
+    "interventions": ["beta-adrenoceptor blocker and diuretic combination products", "pindolol combined with 5 mg clopamide", "metoprolol combined with 12.5 mg hydrochlorothiazide", "untreated", "pindolol/clopamide", "combination products"],
     "outcomes": ["resting blood pressure", "Exercise systolic pressure", "incidence of side-effects"]
 }
 
@@ -205,7 +205,7 @@ Interventions = what treatments, drugs, or procedures were tested. Look for:
 
 Example:
 Abstract: "A comparison of the serologic responses to oral and injectable trivalent poliovirus vaccines. United States children two months of age were randomly assigned to two groups that received either the commercially available oral trivalent poliovirus vaccine ( OPV ) or an injectable (inactivated) trivalent poliovirus vaccine (IPV) with a confirmed minimum D-antigen content of 27, 3.5, and 29 units for poliovirus types 1, 2, and 3, respectively."
-Output: ["trivalent poliovirus vaccines .", "oral trivalent poliovirus vaccine ( OPV )", "injectable ( inactivated ) trivalent poliovirus vaccine ( IPV )"]
+Output: ["trivalent poliovirus vaccines .", "oral trivalent poliovirus vaccine ( OPV )", "injectable ( inactivated ) trivalent poliovirus vaccine ( IPV )", "IPV"]
 
 Now extract from this abstract. Return ONLY a JSON list of short phrases.
 
@@ -222,7 +222,7 @@ Outcomes = what was measured or assessed. Look for:
 
 Example:
 Abstract: "Sera obtained from 439 children at two, four, and six months of age and from 85 children at 18 and 20 months of age were examined for neutralizing antibodies. The percentage of children with detectable antibodies and the reciprocal geometric mean titers were similar for both groups at two months of age for antibodies to all three poliovirus types. At 20 months of age, all children but one had detectable antibodies to all three poliovirus types. Significantly higher geometric mean titers against types 2 and 3 were noted at 20 months of age for the IPV group."
-Output: ["neutralizing antibodies .", "percentage of children with detectable antibodies and the reciprocal geometric mean titers", "antibodies to all three poliovirus types .", "geometric mean titers against types 2 and 3"]
+Output: ["neutralizing antibodies .", "percentage of children with detectable antibodies and the reciprocal geometric mean titers", "antibodies to all three poliovirus types .", "detectable", "geometric mean titers against types 2 and 3"]
 
 Now extract from this abstract. Return ONLY a JSON list of short phrases.
 
@@ -279,7 +279,7 @@ Interventions = what treatments, drugs, or procedures were tested. Look for:
 
 Example 1:
 Abstract: "A comparison of the serologic responses to oral and injectable trivalent poliovirus vaccines. United States children two months of age were randomly assigned to two groups that received either the commercially available oral trivalent poliovirus vaccine ( OPV ) or an injectable (inactivated) trivalent poliovirus vaccine (IPV) with a confirmed minimum D-antigen content of 27, 3.5, and 29 units for poliovirus types 1, 2, and 3, respectively."
-Output: ["trivalent poliovirus vaccines .", "oral trivalent poliovirus vaccine ( OPV )", "injectable ( inactivated ) trivalent poliovirus vaccine ( IPV )"]
+Output: ["trivalent poliovirus vaccines .", "oral trivalent poliovirus vaccine ( OPV )", "injectable ( inactivated ) trivalent poliovirus vaccine ( IPV )", "IPV"]
 
 Example 2:
 Abstract: "Tracheal soiling with blood during intranasal surgery--comparison of two endotracheal tubes. Sixty adult patients, ASA Classes I & II, were involved in a study to compare the effectiveness of Mallinckrodt Hi-Lo-Evac tube and Portex blue line tube in preventing soiling of the lower airways during intranasal surgery."
@@ -287,7 +287,7 @@ Output: ["intranasal surgery -- comparison", "Mallinckrodt Hi-Lo-Evac tube and P
 
 Example 3:
 Abstract: "METHODS In a blinded experiment, we randomized 99 African American patients with hypertension to perform a values-affirmation exercise or a control exercise before a visit with their primary care provider. CONCLUSIONS A values-affirmation exercise improves aspects of patient-provider communication in race-discordant primary care visits."
-Output: ["values-affirmation exercise or a control exercise", "care visits"]
+Output: ["values-affirmation exercise or a control exercise", "values-affirmation exercise"],
 
 Example 4:
 Abstract: "Effect of guided imagery on length of stay, pain and anxiety in cardiac surgery patients."
@@ -295,7 +295,7 @@ Output: ["guided imagery"]
 
 Example 5:
 Abstract: "A comparative trial of fixed ratio beta-adrenoceptor blocker and diuretic combination products in moderate hypertension. Two fixed ratio combination tablets, 10 mg pindolol combined with 5 mg clopamide and 100 mg metoprolol combined with 12.5 mg hydrochlorothiazide, were compared at two dose levels in a double-blind crossover trial in 10 previously untreated hypertensive patients. It is suggested that combination products should be used only after patients have failed to respond adequately to a single agent."
-Output: ["beta-adrenoceptor blocker and diuretic combination products", "pindolol combined with 5 mg clopamide", "metoprolol combined with 12.5 mg hydrochlorothiazide", "combination products"]
+Output: ["beta-adrenoceptor blocker and diuretic combination products", "pindolol combined with 5 mg clopamide", "metoprolol combined with 12.5 mg hydrochlorothiazide", "untreated", "pindolol/clopamide", "combination products"]
 
 Now extract from this abstract. Return ONLY a JSON list of short phrases.
 
@@ -312,15 +312,15 @@ Outcomes = what was measured or assessed. Look for:
 
 Example 1:
 Abstract: "Sera obtained from 439 children at two, four, and six months of age and from 85 children at 18 and 20 months of age were examined for neutralizing antibodies. The percentage of children with detectable antibodies and the reciprocal geometric mean titers were similar for both groups at two months of age for antibodies to all three poliovirus types. At 20 months of age, all children but one had detectable antibodies to all three poliovirus types. Significantly higher geometric mean titers against types 2 and 3 were noted at 20 months of age for the IPV group."
-Output: ["neutralizing antibodies .", "percentage of children with detectable antibodies and the reciprocal geometric mean titers", "antibodies to all three poliovirus types .", "geometric mean titers against types 2 and 3"]
+Output: ["neutralizing antibodies .", "percentage of children with detectable antibodies and the reciprocal geometric mean titers", "antibodies to all three poliovirus types .", "detectable", "geometric mean titers against types 2 and 3"]
 
 Example 2:
 Abstract: "The more effective protection of the lower airways by the Hi-Lo-Evac tube is attributed to the facility of subglottic aspiration during surgery. It is suggested that the Hi-Lo-Evac tube could be used with safety during intranasal surgery in order to reduce postoperative morbidity associated with the use of pharyngeal pack."
-Output: ["effective protection of the lower airways", "postoperative morbidity"]
+Output: ["effective", "effective protection of the lower airways", "safety" "postoperative morbidity"]
 
 Example 3:
 Abstract: "RESULTS Patients in the intervention group requested and provided more information about their medical condition (mean SE number of utterances, 66.3 6.8 in the values-affirmation group vs 48.1 5.9 in the control group P = .03). Patient-provider communication in the intervention group was characterized as being more interested, friendly, responsive, interactive, and respectful (P = .02) and less depressed and distressed (P = .03). Patient questionnaires did not detect differences in visit satisfaction, trust, stress, or mood. Mean visit duration did not differ significantly between the groups (19.2 minutes in the control group vs 20.5 minutes in the intervention group P = .29)."
-Output: ["medical condition", "and respectful ( P = .02 ) and less depressed", ". Patient questionnaires", "mood . Mean visit duration did not differ significantly between the groups ("]
+Output: ["information", "medical condition", "interested , friendly , responsive , interactive , and respectful", "depressed and distressed", "visit satisfaction , trust , stress , or mood . Mean visit duration"]
 
 Example 4:
 Abstract: "Effect of guided imagery on length of stay, pain and anxiety in cardiac surgery patients."
